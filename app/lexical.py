@@ -45,7 +45,7 @@ SELECT
   d.image, d.titleAr, d.titleEn, d.subtitleAr, d.subtitleEn,
   d.governorateId, d.cityId, d.rating, d.reviewCount,
   d.isVerified, d.isPermanentPartner, d.hasDiscount,
-  d.partnerLevel, d.rank, d.planSearchPriorityRank,
+  d.partnerLevel, d.`rank`, d.planSearchPriorityRank,
   d.rankingWeight, d.verificationKind,
   MATCH(d.normalizedTitle, d.searchText, d.keywordsText)
     AGAINST (%s IN NATURAL LANGUAGE MODE) AS lexicalScore
@@ -81,7 +81,7 @@ SELECT
   d.image, d.titleAr, d.titleEn, d.subtitleAr, d.subtitleEn,
   d.governorateId, d.cityId, d.rating, d.reviewCount,
   d.isVerified, d.isPermanentPartner, d.hasDiscount,
-  d.partnerLevel, d.rank, d.planSearchPriorityRank,
+  d.partnerLevel, d.`rank`, d.planSearchPriorityRank,
   d.rankingWeight, d.verificationKind,
   1.0 AS lexicalScore
 FROM PublicSearchDocument d

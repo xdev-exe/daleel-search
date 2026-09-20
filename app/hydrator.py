@@ -26,7 +26,7 @@ async def hydrate(candidates: list[dict]):
                titleAr, titleEn, subtitleAr, subtitleEn,
                governorateId, cityId, rating, reviewCount,
                isVerified, isPermanentPartner, hasDiscount,
-               partnerLevel, rank, planSearchPriorityRank,
+               partnerLevel, `rank`, planSearchPriorityRank,
                rankingWeight, verificationKind
         FROM PublicSearchDocument
         WHERE isVisible = 1 AND ({conditions})
